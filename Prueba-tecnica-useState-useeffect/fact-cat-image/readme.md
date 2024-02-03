@@ -38,3 +38,4 @@ APIS:
 
 Sugerencias: 
 - Probar que las APIs sean correctas y que arrojen resultado
+- Evitar cada vez que se pueda sacar el setState del componente o del custom hook
