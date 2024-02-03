@@ -15,6 +15,7 @@
 
 .fact-title{
     font-size: 2rem;
+    text-align: center;
 }
 .fact-button{
     cursor: pointer;

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./styles/app.css";
 
 const RANDOM_FACT_API = "https://catfact.ninja/fact";
-const RANDOM_CAT_IMAGE = "https://cataas.com/cat/says/hello";
+const RANDOM_CAT_IMAGE = "https://cataas.com";
 
 const App = () => {
   const [fact, setFact] = useState();
@@ -27,9 +27,9 @@ const App = () => {
 
   return (
     <section className="cat-section">
-      <h2 className="fact-title">Fact: {fact}</h2>
+      {fact && (<h2 className="fact-title">Fact: {fact}</h2>)}
       <button className="fact-button" onClick={handleChangeImage}>Get Random Image Cat</button>
-      <img className="cat-image" src={imageCat} alt={`Image obtained from a random fact ${fact}`} />
+      {imageCat && (<img className="cat-image" src={imageCat} alt={`Image obtained from a random fact ${fact}`} />)}
      
     </section>
   )
@@ -43,14 +43,13 @@ const  getRandomFact = async ()=>{
   }
 
   const factJSON = await response.json();
-  const {fact} = factJSON;
-  const firstThreeWords = fact.split(" ", 3).join(" ");
-  return firstThreeWords;
- 
+  const {fact} = factJSON;  
+  return fact; 
 }
 
-const getImageFromFact = async ({fact}) =>{  
-  const response = await fetch(`https://cataas.com/cat/says/${fact}?fontColor=white`)
+const getImageFromFact = async ({fact}) =>{
+  const firstThreeWords = fact.split(" ", 3).join(" ");
+  const response = await fetch(`https://cataas.com/cat/says/${firstThreeWords}?fontColor=white`)
   if(response.ok){    
     return response.url;
   }
