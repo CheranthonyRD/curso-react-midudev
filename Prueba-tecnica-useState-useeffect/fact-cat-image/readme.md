@@ -26,3 +26,15 @@
     (
         <App/>
     )
+
+5 - instalar un linter
+    npm install standard -E
+
+6 - Comenzamos con la prueba tecnica
+
+APIS: 
+- random Facts: https://catfact.ninja/fact
+- image random: https://cataas.com/cat/says/hello
+
+Sugerencias: 
+- Probar que las APIs sean correctas y que arrojen resultado
