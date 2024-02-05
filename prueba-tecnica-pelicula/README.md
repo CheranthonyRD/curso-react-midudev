@@ -25,3 +25,9 @@ Primera iteración:
  Haz que la búsqueda se haga automáticamente al escribir.
 
  Evita que se haga la búsqueda continuamente al escribir (debounce)
+
+ # useRef
+ Este hook permite crear una referencia mutable que persiste durante todo el ciclo de vida del componente, cuando cambia, no actualiza/renderiza el componente al contrario del useState
+
+
+image not found: "https://st4.depositphotos.com/14953852/22772/v/450/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg"
